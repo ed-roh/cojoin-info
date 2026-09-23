@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join me on CoJoin</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --ink:#100E14; --ground:#FBF8F2; --action:#9FE8B4; --ink70:rgba(16,14,20,.72); }
+  html,body { margin:0; background:var(--ground); color:var(--ink); font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 420px; margin: 0 auto; padding: 48px 20px 40px; }
+  h1 { font-size: 40px; line-height: 1; letter-spacing: -1.5px; text-transform: uppercase; margin: 0 0 12px; font-weight: 800; }
+  p { font-size: 15px; line-height: 1.45; color: var(--ink70); margin: 0 0 22px; }
+  .rule { height:3px; background:var(--ink); margin: 18px 0 26px; }
+  a.btn { display:flex; align-items:center; justify-content:space-between; text-decoration:none; padding:16px 18px; margin-bottom:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; font-size:13px; }
+  a.primary { background:var(--ink); color:var(--ground); }
+  a.outline { border:2px solid var(--ink); color:var(--ink); }
+  .dot { width:34px; height:34px; border-radius:17px; background:var(--action); display:inline-block; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: rgba(16,14,20,.06); padding: 2px 6px; word-break: break-all; }
+  small { display:block; margin-top: 28px; color: var(--ink70); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Join me on<br>CoJoin</h1>
+  <p>Someone wants to connect with you on CoJoin, the app for actually seeing your friends.</p>
+  <div class="rule"></div>
+  <a id="open" class="btn primary" href="#">Open in CoJoin <span class="dot"></span></a>
+  <a id="store" class="btn outline" href="https://apps.apple.com/app/id6800561537">Get CoJoin on the App Store</a>
+  <p id="hint" style="margin-top:22px">Already installed? Tap <strong>Open in CoJoin</strong>. New here? Install the app, then come back and tap it again — or paste this code in the app under <em>Add a friend → Scan their QR code → Paste a code</em>:</p>
+  <code id="token">…</code>
+  <small>CoJoin never sees your contacts or messages. Invite links expire after 7 days.</small>
+</main>
+<script>
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var token = (params.get('token') || '').trim();
+    var scheme = 'cojoin://connect?token=' + encodeURIComponent(token);
+    var open = document.getElementById('open');
+    document.getElementById('token').textContent = token || 'missing token';
+    if (!token) { open.style.display = 'none'; document.getElementById('hint').textContent = 'This invite link is missing its code. Ask your friend to send it again.'; return; }
+    open.href = scheme;
+    // Try the app first; if nothing handles the scheme the page simply stays.
+    setTimeout(function () { try { location.href = scheme; } catch (e) {} }, 300);
+  })();
+</script>
+</body>
+</html>
