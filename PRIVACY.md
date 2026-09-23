@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**CoJoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
+**Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
 **Last updated: August 5, 2026**
 
@@ -8,7 +8,7 @@
 
 ## The short version
 
-CoJoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.
+Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.
 
 ---
 
@@ -31,21 +31,21 @@ You can change your email or password in Settings → Account. Both ask for your
 **Where it lives:** Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.
 
 ### Messages and vibe posts
-- Direct messages you send to other CoJoin users
+- Direct messages you send to other Cojoin users
 - "Vibe" posts (what you're up to, when, and an optional photo) and who's visible to see them
-- If you paste an event link (for example a Partiful, Luma or Eventbrite page) into a vibe, your phone fetches that page directly to read its title, time, place and cover image; the link, place and cover-image address are saved with the vibe and shown to its audience. CoJoin does not proxy or log the request.
+- If you paste an event link (for example a Partiful, Luma or Eventbrite page) into a vibe, your phone fetches that page directly to read its title, time, place and cover image; the link, place and cover-image address are saved with the vibe and shown to its audience. Cojoin does not proxy or log the request.
 - Message and vibe content is visible to the people you're messaging or sharing with, consistent with what you post and who you choose to share it with
 
 **Where it lives:** Stored in our database. Vibe photos are stored in cloud file storage.
 
 ### Location
-CoJoin does **not** request your device location. The Suggestions screen uses your approximate city via IP-based lookup (ipapi.co) to display weather context. This request is made from your device directly and CoJoin does not store or log your IP address or location from it.
+Cojoin does **not** request your device location. The Suggestions screen uses your approximate city via IP-based lookup (ipapi.co) to display weather context. This request is made from your device directly and Cojoin does not store or log your IP address or location from it.
 
 ### Camera
-CoJoin requests camera access to scan a friend's QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don't choose to attach are never captured or stored.
+Cojoin requests camera access to scan a friend's QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don't choose to attach are never captured or stored.
 
 ### Notifications
-If you grant notification permission, CoJoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data.
+If you grant notification permission, Cojoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data.
 
 ---
 
@@ -82,7 +82,7 @@ Go to Settings → Delete Account to permanently delete your account, friends li
 
 ## Children
 
-CoJoin is not directed at children under 13 and does not knowingly collect data from children.
+Cojoin is not directed at children under 13 and does not knowingly collect data from children.
 
 ---
 
@@ -94,8 +94,8 @@ If this policy changes, the updated version will be posted at this URL. The "las
 
 ## Contact
 
-Questions? Open an issue at https://github.com/andrew-v1/cojoin-info.
+Questions? Open an issue at https://github.com/ed-roh/cojoin-info.
 
 ---
 
-*This file is the working copy. The published version served to users and App Store reviewers lives at [github.com/andrew-v1/cojoin-info](https://github.com/andrew-v1/cojoin-info/blob/main/PRIVACY.md) — keep both in sync when this changes.*
+*This file is the working copy. The published version served to users and App Store reviewers lives at [github.com/ed-roh/cojoin-info](https://github.com/ed-roh/cojoin-info/blob/main/PRIVACY.md) — keep both in sync when this changes.*

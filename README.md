@@ -1,6 +1,6 @@
 # cojoin-info
 
-Static site for CoJoin, served by GitHub Pages at https://ed-roh.github.io/cojoin-info/
+Static site for Cojoin, served by GitHub Pages at https://ed-roh.github.io/cojoin-info/
 
 - `index.html` — landing page (support link, privacy link)
 - `invite/index.html` — where invite links land when the app isn't installed
