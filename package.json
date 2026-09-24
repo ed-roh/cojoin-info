@@ -1,0 +1,23 @@
+{
+  "name": "cojoin-info",
+  "version": "1.0.0",
+  "description": "Static site for Cojoin, served by GitHub Pages at https://ed-roh.github.io/cojoin-info/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed-roh/cojoin-info.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ed-roh/cojoin-info/issues"
+  },
+  "homepage": "https://github.com/ed-roh/cojoin-info#readme",
+  "devDependencies": {
+    "marked": "^14.1.4"
+  }
+}

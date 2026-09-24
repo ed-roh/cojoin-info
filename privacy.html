@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cojoin · Privacy Policy</title>
+<style>
+  :root { --ink:#100E14; --ground:#FBF8F2; --ink70:rgba(16,14,20,.72); --rule:rgba(16,14,20,.14); }
+  html,body { margin:0; background:var(--ground); color:var(--ink); font-family:-apple-system,"Space Grotesk",Helvetica,Arial,sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:48px 20px 80px; line-height:1.55; }
+  h1 { font-size:44px; line-height:1; letter-spacing:-.03em; text-transform:uppercase; margin:0 0 8px; }
+  h2 { font-size:22px; letter-spacing:-.01em; text-transform:uppercase; margin:36px 0 8px; padding-bottom:6px; border-bottom:3px solid var(--ink); }
+  h3 { font-size:16px; margin:22px 0 6px; }
+  p, li { color:var(--ink70); font-size:15px; }
+  a { color:var(--ink); }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1.5px solid var(--rule); vertical-align:top; }
+  th { color:var(--ink); }
+  hr { border:0; border-top:1.5px solid var(--rule); margin:28px 0; }
+  .back { display:inline-block; margin-bottom:24px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">← Cojoin</a>
+  <h1>Privacy Policy</h1>
+<p><strong>Cojoin</strong> (&quot;the app&quot;) is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.</p>
+<p><strong>Last updated: August 5, 2026</strong></p>
+<hr>
+<h2>The short version</h2>
+<p>Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.</p>
+<hr>
+<h2>What data the app collects</h2>
+<h3>Account data</h3>
+<ul>
+<li>Email address and password (used only for sign-in; passwords are hashed and never visible to us)</li>
+<li>Your name and phone number, if you add them to your profile</li>
+<li>A profile photo, if you add one. It is resized on your device and stored in cloud file storage at a public URL, so the friends you connect with can see it next to your name. Removing it in Edit profile deletes the file.</li>
+</ul>
+<p><strong>Where it lives:</strong> Stored in our database (Supabase), access-controlled so only you can read your own account data. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.</p>
+<p>You can change your email or password in Settings → Account. Both ask for your current password first; an email change is confirmed by links sent to both your old and your new address.</p>
+<h3>Friends data</h3>
+<ul>
+<li>Names, phone numbers, interests, and notes for the friends you add</li>
+<li>Hangout logs (date, activity type, optional memory note)</li>
+<li>Streaks, health scores, and flake logs</li>
+</ul>
+<p><strong>Where it lives:</strong> Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.</p>
+<h3>Messages and vibe posts</h3>
+<ul>
+<li>Direct messages you send to other Cojoin users</li>
+<li>&quot;Vibe&quot; posts (what you&#39;re up to, when, and an optional photo) and who&#39;s visible to see them</li>
+<li>If you paste an event link (for example a Partiful, Luma or Eventbrite page) into a vibe, your phone fetches that page directly to read its title, time, place and cover image; the link, place and cover-image address are saved with the vibe and shown to its audience. Cojoin does not proxy or log the request.</li>
+<li>Message and vibe content is visible to the people you&#39;re messaging or sharing with, consistent with what you post and who you choose to share it with</li>
+</ul>
+<p><strong>Where it lives:</strong> Stored in our database. Vibe photos are stored in cloud file storage.</p>
+<h3>Location</h3>
+<p>Cojoin does <strong>not</strong> request your device location. The Suggestions screen uses your approximate city via IP-based lookup (ipapi.co) to display weather context. This request is made from your device directly and Cojoin does not store or log your IP address or location from it.</p>
+<h3>Camera</h3>
+<p>Cojoin requests camera access to scan a friend&#39;s QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don&#39;t choose to attach are never captured or stored.</p>
+<h3>Notifications</h3>
+<p>If you grant notification permission, Cojoin schedules local reminders on your device (e.g., &quot;You haven&#39;t seen Jordan in a while&quot;). These are generated on-device from your synced data.</p>
+<hr>
+<h2>What the app does NOT do</h2>
+<ul>
+<li>No advertising, no ad identifiers, no ad tracking</li>
+<li>No selling or sharing your data with third parties for their own purposes</li>
+<li>No analytics beyond what&#39;s needed to keep the app running reliably</li>
+</ul>
+<hr>
+<h2>Reporting and blocking</h2>
+<p>You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are reviewed by the developer.</p>
+<hr>
+<h2>Third-party services</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+<th>Privacy policy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supabase</td>
+<td>Account, database, and file storage (photos)</td>
+<td><a href="https://supabase.com/privacy">https://supabase.com/privacy</a></td>
+</tr>
+<tr>
+<td>Event sites you paste (Partiful, Luma, Eventbrite, …)</td>
+<td>Fetched by your phone to fill in a vibe from a link; their images are loaded from their servers when the vibe is shown</td>
+<td>Their own policies</td>
+</tr>
+<tr>
+<td>ipapi.co</td>
+<td>City-level location from IP, for weather context only</td>
+<td><a href="https://ipapi.co/privacy">https://ipapi.co/privacy</a></td>
+</tr>
+<tr>
+<td>Open-Meteo</td>
+<td>Weather forecast</td>
+<td><a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Data deletion</h2>
+<p>Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts and photos. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.</p>
+<hr>
+<h2>Children</h2>
+<p>Cojoin is not directed at children under 13 and does not knowingly collect data from children.</p>
+<hr>
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be posted at this URL. The &quot;last updated&quot; date at the top will reflect the change.</p>
+<hr>
+<h2>Contact</h2>
+<p>Questions? Open an issue at <a href="https://github.com/ed-roh/cojoin-info">https://github.com/ed-roh/cojoin-info</a>.</p>
+<hr>
+<p><em>This file is the working copy. The published version served to users and App Store reviewers lives at <a href="https://github.com/ed-roh/cojoin-info/blob/main/PRIVACY.md">github.com/ed-roh/cojoin-info</a> — keep both in sync when this changes.</em></p>
+
+</main>
+</body>
+</html>

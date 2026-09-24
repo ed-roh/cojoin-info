@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "L25X75665K.com.andrewv1.showup",
+        "paths": [
+          "/invite/*",
+          "/invite"
+        ]
+      }
+    ]
+  }
+}
