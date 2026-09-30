@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
-**Last updated: August 5, 2026**
+**Last updated: September 30, 2026**
 
 ---
 
@@ -30,6 +30,12 @@ You can change your email or password in Settings → Account. Both ask for your
 
 **Where it lives:** Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.
 
+### Contacts
+If you choose **Import from contacts**, Cojoin asks for access to your address book and shows it to you on your device so you can pick people. Only the people you tick are saved — their name and phone number become entries in your friends list (above). The rest of your address book is never read into the app's storage, uploaded, or matched against other users. You can add friends without ever granting contacts access.
+
+### Invites and connections
+Friend connections are made with single-use invite links or QR codes. A link contains a random token tied to your account; when a friend opens it, the two accounts are connected and each of you gets the other's display name. Links expire after 7 days. Opening a link in a browser shows a short page on cojoin.io that hands off to the app; that page does not set cookies or collect anything.
+
 ### Messages and vibe posts
 - Direct messages you send to other Cojoin users
 - "Vibe" posts (what you're up to, when, and an optional photo) and who's visible to see them
@@ -39,13 +45,18 @@ You can change your email or password in Settings → Account. Both ask for your
 **Where it lives:** Stored in our database. Vibe photos are stored in cloud file storage.
 
 ### Location
-Cojoin does **not** request your device location. The Suggestions screen uses your approximate city via IP-based lookup (ipapi.co) to display weather context. This request is made from your device directly and Cojoin does not store or log your IP address or location from it.
+Location sharing is **off until you turn it on** (Profile or Settings → Share my location, or the toggle during onboarding). When it is on, the app asks for while-in-use location permission and stores a **coarse** position — rounded to roughly 1 km — together with a neighbourhood label and a timestamp. It is shown only to friends you are connected with who also share theirs, on the Discover screen's "Near me". Your exact coordinates are never stored, and turning sharing off removes your stored position. Nothing in the app depends on location; every other feature works with it off.
+
+Separately, the Suggestions screen looks up your approximate city from your IP address (ipapi.co) to show weather context for a suggested plan. That request is made from your device directly; Cojoin does not store or log your IP address or location from it.
 
 ### Camera
 Cojoin requests camera access to scan a friend's QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don't choose to attach are never captured or stored.
 
 ### Notifications
-If you grant notification permission, Cojoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data.
+If you grant notification permission, Cojoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.
+
+### Feedback
+If you send feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, the optional reply address you enter, your account email, and the app version and device type are emailed to the team through a form-to-email relay (FormSubmit) and kept in our database so nothing is lost. Feedback is used only to improve the app and reply to you.
 
 ---
 
@@ -71,12 +82,14 @@ You can report or block anyone who messages you directly from a chat thread. Blo
 | Event sites you paste (Partiful, Luma, Eventbrite, …) | Fetched by your phone to fill in a vibe from a link; their images are loaded from their servers when the vibe is shown | Their own policies |
 | ipapi.co | City-level location from IP, for weather context only | https://ipapi.co/privacy |
 | Open-Meteo | Weather forecast | https://open-meteo.com/en/terms |
+| FormSubmit | Delivers in-app feedback to the team by email | https://formsubmit.co/privacy |
+| Vercel | Hosts cojoin.io (this page and the invite hand-off page) | https://vercel.com/legal/privacy-policy |
 
 ---
 
 ## Data deletion
 
-Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts and photos. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.
+Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts, photos, shared location and invite links. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.
 
 ---
 
@@ -94,8 +107,8 @@ If this policy changes, the updated version will be posted at this URL. The "las
 
 ## Contact
 
-Questions? Open an issue at https://github.com/ed-roh/cojoin-info.
+Questions? Use Settings → Help → Send feedback in the app, or email andrew.v1.win@gmail.com.
 
 ---
 
-*This file is the working copy. The published version served to users and App Store reviewers lives at [github.com/ed-roh/cojoin-info](https://github.com/ed-roh/cojoin-info/blob/main/PRIVACY.md) — keep both in sync when this changes.*
+*The published version served to users and App Store reviewers is https://cojoin.io/privacy (generated from this file). The app repository keeps a copy; keep both in sync when this changes.*

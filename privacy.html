@@ -25,7 +25,7 @@
   <a class="back" href="/">← Cojoin</a>
   <h1>Privacy Policy</h1>
 <p><strong>Cojoin</strong> (&quot;the app&quot;) is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.</p>
-<p><strong>Last updated: August 5, 2026</strong></p>
+<p><strong>Last updated: September 30, 2026</strong></p>
 <hr>
 <h2>The short version</h2>
 <p>Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.</p>
@@ -46,6 +46,10 @@
 <li>Streaks, health scores, and flake logs</li>
 </ul>
 <p><strong>Where it lives:</strong> Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.</p>
+<h3>Contacts</h3>
+<p>If you choose <strong>Import from contacts</strong>, Cojoin asks for access to your address book and shows it to you on your device so you can pick people. Only the people you tick are saved — their name and phone number become entries in your friends list (above). The rest of your address book is never read into the app&#39;s storage, uploaded, or matched against other users. You can add friends without ever granting contacts access.</p>
+<h3>Invites and connections</h3>
+<p>Friend connections are made with single-use invite links or QR codes. A link contains a random token tied to your account; when a friend opens it, the two accounts are connected and each of you gets the other&#39;s display name. Links expire after 7 days. Opening a link in a browser shows a short page on cojoin.io that hands off to the app; that page does not set cookies or collect anything.</p>
 <h3>Messages and vibe posts</h3>
 <ul>
 <li>Direct messages you send to other Cojoin users</li>
@@ -55,11 +59,14 @@
 </ul>
 <p><strong>Where it lives:</strong> Stored in our database. Vibe photos are stored in cloud file storage.</p>
 <h3>Location</h3>
-<p>Cojoin does <strong>not</strong> request your device location. The Suggestions screen uses your approximate city via IP-based lookup (ipapi.co) to display weather context. This request is made from your device directly and Cojoin does not store or log your IP address or location from it.</p>
+<p>Location sharing is <strong>off until you turn it on</strong> (Profile or Settings → Share my location, or the toggle during onboarding). When it is on, the app asks for while-in-use location permission and stores a <strong>coarse</strong> position — rounded to roughly 1 km — together with a neighbourhood label and a timestamp. It is shown only to friends you are connected with who also share theirs, on the Discover screen&#39;s &quot;Near me&quot;. Your exact coordinates are never stored, and turning sharing off removes your stored position. Nothing in the app depends on location; every other feature works with it off.</p>
+<p>Separately, the Suggestions screen looks up your approximate city from your IP address (ipapi.co) to show weather context for a suggested plan. That request is made from your device directly; Cojoin does not store or log your IP address or location from it.</p>
 <h3>Camera</h3>
 <p>Cojoin requests camera access to scan a friend&#39;s QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don&#39;t choose to attach are never captured or stored.</p>
 <h3>Notifications</h3>
-<p>If you grant notification permission, Cojoin schedules local reminders on your device (e.g., &quot;You haven&#39;t seen Jordan in a while&quot;). These are generated on-device from your synced data.</p>
+<p>If you grant notification permission, Cojoin schedules local reminders on your device (e.g., &quot;You haven&#39;t seen Jordan in a while&quot;). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.</p>
+<h3>Feedback</h3>
+<p>If you send feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, the optional reply address you enter, your account email, and the app version and device type are emailed to the team through a form-to-email relay (FormSubmit) and kept in our database so nothing is lost. Feedback is used only to improve the app and reply to you.</p>
 <hr>
 <h2>What the app does NOT do</h2>
 <ul>
@@ -100,10 +107,20 @@
 <td>Weather forecast</td>
 <td><a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></td>
 </tr>
+<tr>
+<td>FormSubmit</td>
+<td>Delivers in-app feedback to the team by email</td>
+<td><a href="https://formsubmit.co/privacy">https://formsubmit.co/privacy</a></td>
+</tr>
+<tr>
+<td>Vercel</td>
+<td>Hosts cojoin.io (this page and the invite hand-off page)</td>
+<td><a href="https://vercel.com/legal/privacy-policy">https://vercel.com/legal/privacy-policy</a></td>
+</tr>
 </tbody></table>
 <hr>
 <h2>Data deletion</h2>
-<p>Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts and photos. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.</p>
+<p>Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts, photos, shared location and invite links. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.</p>
 <hr>
 <h2>Children</h2>
 <p>Cojoin is not directed at children under 13 and does not knowingly collect data from children.</p>
@@ -112,9 +129,9 @@
 <p>If this policy changes, the updated version will be posted at this URL. The &quot;last updated&quot; date at the top will reflect the change.</p>
 <hr>
 <h2>Contact</h2>
-<p>Questions? Open an issue at <a href="https://github.com/ed-roh/cojoin-info">https://github.com/ed-roh/cojoin-info</a>.</p>
+<p>Questions? Use Settings → Help → Send feedback in the app, or email <a href="mailto:andrew.v1.win@gmail.com">andrew.v1.win@gmail.com</a>.</p>
 <hr>
-<p><em>This file is the working copy. The published version served to users and App Store reviewers lives at <a href="https://github.com/ed-roh/cojoin-info/blob/main/PRIVACY.md">github.com/ed-roh/cojoin-info</a> — keep both in sync when this changes.</em></p>
+<p><em>The published version served to users and App Store reviewers is <a href="https://cojoin.io/privacy">https://cojoin.io/privacy</a> (generated from this file). The app repository keeps a copy; keep both in sync when this changes.</em></p>
 
 </main>
 </body>
