@@ -35,7 +35,7 @@ Cojoin is for seeing your friends in person. There is **no tolerance** for:
 - posting other people's private information without their consent;
 - anything else that is unlawful or abusive.
 
-We may remove content and suspend or delete accounts that break these rules, without notice. Reports are reviewed by the developer; objectionable content is removed and the account that posted it is ejected within 24 hours of a report being received.
+Profiles, vibes and messages may be screened by an automated safety service and reviewed by a moderator before or after they are shown (see the Privacy Policy for the services involved). We may remove content and suspend or delete accounts that break these rules, without notice. Reports are reviewed by the developer; objectionable content is removed and the account that posted it is ejected within 24 hours of a report being received.
 
 ---
 
