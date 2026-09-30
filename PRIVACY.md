@@ -70,7 +70,7 @@ If you send feedback or a bug report from Settings → Help (or Profile → Send
 
 ## Reporting and blocking
 
-You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are reviewed by the developer.
+You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database and a copy (account ids, reason, and the message or vibe id — no message text) is relayed to the team by email through FormSubmit, so they can be acted on within 24 hours. Reports are reviewed by the developer.
 
 ---
 
