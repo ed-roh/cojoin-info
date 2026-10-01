@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
-**Last updated: September 30, 2026**
+**Last updated: October 1, 2026**
 
 ---
 
@@ -52,6 +52,9 @@ Separately, the Suggestions screen looks up your approximate city from your IP a
 ### Camera
 Cojoin requests camera access to scan a friend's QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don't choose to attach are never captured or stored.
 
+### Automated safety screening
+Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI's moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.
+
 ### Notifications
 If you grant notification permission, Cojoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.
 
@@ -70,7 +73,7 @@ If you send feedback or a bug report from Settings → Help (or Profile → Send
 
 ## Reporting and blocking
 
-You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database and a copy (account ids, reason, and the message or vibe id — no message text) is relayed to the team by email through FormSubmit, so they can be acted on within 24 hours. Reports are reviewed by the developer.
+You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database for review. To follow up on a report or appeal a decision, contact the support address below.
 
 ---
 
@@ -82,6 +85,7 @@ You can report or block anyone who messages you directly from a chat thread. Blo
 | Event sites you paste (Partiful, Luma, Eventbrite, …) | Fetched by your phone to fill in a vibe from a link; their images are loaded from their servers when the vibe is shown | Their own policies |
 | ipapi.co | City-level location from IP, for weather context only | https://ipapi.co/privacy |
 | Open-Meteo | Weather forecast | https://open-meteo.com/en/terms |
+| OpenAI (moderation API) | Automated safety classification of new posts, photos, messages and profile details; on by default, can be turned off in Settings | https://openai.com/policies/privacy-policy |
 | FormSubmit | Delivers in-app feedback to the team by email | https://formsubmit.co/privacy |
 | Vercel | Hosts cojoin.io (this page and the invite hand-off page) | https://vercel.com/legal/privacy-policy |
 

@@ -22,16 +22,16 @@
 </head>
 <body>
 <main>
-  <a class="back" href="/">← Cojoin</a>
-  <h1>Privacy Policy</h1>
+<a class="back" href="/">← Cojoin</a>
+<h1>Privacy Policy</h1>
 <p><strong>Cojoin</strong> (&quot;the app&quot;) is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.</p>
-<p><strong>Last updated: September 30, 2026</strong></p>
+<p><strong>Last updated: October 1, 2026</strong></p>
 <hr>
-<h2 id="the-short-version">The short version</h2>
+<h2>The short version</h2>
 <p>Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.</p>
 <hr>
-<h2 id="what-data-the-app-collects">What data the app collects</h2>
-<h3 id="account-data">Account data</h3>
+<h2>What data the app collects</h2>
+<h3>Account data</h3>
 <ul>
 <li>Email address and password (used only for sign-in; passwords are hashed and never visible to us)</li>
 <li>Your name and phone number, if you add them to your profile</li>
@@ -39,18 +39,18 @@
 </ul>
 <p><strong>Where it lives:</strong> Stored in our database (Supabase), access-controlled so only you can read your own account data. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.</p>
 <p>You can change your email or password in Settings → Account. Both ask for your current password first; an email change is confirmed by links sent to both your old and your new address.</p>
-<h3 id="friends-data">Friends data</h3>
+<h3>Friends data</h3>
 <ul>
 <li>Names, phone numbers, interests, and notes for the friends you add</li>
 <li>Hangout logs (date, activity type, optional memory note)</li>
 <li>Streaks, health scores, and flake logs</li>
 </ul>
 <p><strong>Where it lives:</strong> Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.</p>
-<h3 id="contacts">Contacts</h3>
+<h3>Contacts</h3>
 <p>If you choose <strong>Import from contacts</strong>, Cojoin asks for access to your address book and shows it to you on your device so you can pick people. Only the people you tick are saved — their name and phone number become entries in your friends list (above). The rest of your address book is never read into the app&#39;s storage, uploaded, or matched against other users. You can add friends without ever granting contacts access.</p>
-<h3 id="invites-and-connections">Invites and connections</h3>
+<h3>Invites and connections</h3>
 <p>Friend connections are made with single-use invite links or QR codes. A link contains a random token tied to your account; when a friend opens it, the two accounts are connected and each of you gets the other&#39;s display name. Links expire after 7 days. Opening a link in a browser shows a short page on cojoin.io that hands off to the app; that page does not set cookies or collect anything.</p>
-<h3 id="messages-and-vibe-posts">Messages and vibe posts</h3>
+<h3>Messages and vibe posts</h3>
 <ul>
 <li>Direct messages you send to other Cojoin users</li>
 <li>&quot;Vibe&quot; posts (what you&#39;re up to, when, and an optional photo) and who&#39;s visible to see them</li>
@@ -58,27 +58,29 @@
 <li>Message and vibe content is visible to the people you&#39;re messaging or sharing with, consistent with what you post and who you choose to share it with</li>
 </ul>
 <p><strong>Where it lives:</strong> Stored in our database. Vibe photos are stored in cloud file storage.</p>
-<h3 id="location">Location</h3>
+<h3>Location</h3>
 <p>Location sharing is <strong>off until you turn it on</strong> (Profile or Settings → Share my location, or the toggle during onboarding). When it is on, the app asks for while-in-use location permission and stores a <strong>coarse</strong> position — rounded to roughly 1 km — together with a neighbourhood label and a timestamp. It is shown only to friends you are connected with who also share theirs, on the Discover screen&#39;s &quot;Near me&quot;. Your exact coordinates are never stored, and turning sharing off removes your stored position. Nothing in the app depends on location; every other feature works with it off.</p>
 <p>Separately, the Suggestions screen looks up your approximate city from your IP address (ipapi.co) to show weather context for a suggested plan. That request is made from your device directly; Cojoin does not store or log your IP address or location from it.</p>
-<h3 id="camera">Camera</h3>
+<h3>Camera</h3>
 <p>Cojoin requests camera access to scan a friend&#39;s QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don&#39;t choose to attach are never captured or stored.</p>
-<h3 id="notifications">Notifications</h3>
+<h3>Automated safety screening</h3>
+<p>Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI&#39;s moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.</p>
+<h3>Notifications</h3>
 <p>If you grant notification permission, Cojoin schedules local reminders on your device (e.g., &quot;You haven&#39;t seen Jordan in a while&quot;). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.</p>
-<h3 id="feedback">Feedback</h3>
+<h3>Feedback</h3>
 <p>If you send feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, the optional reply address you enter, your account email, and the app version and device type are emailed to the team through a form-to-email relay (FormSubmit) and kept in our database so nothing is lost. Feedback is used only to improve the app and reply to you.</p>
 <hr>
-<h2 id="what-the-app-does-not-do">What the app does NOT do</h2>
+<h2>What the app does NOT do</h2>
 <ul>
 <li>No advertising, no ad identifiers, no ad tracking</li>
 <li>No selling or sharing your data with third parties for their own purposes</li>
 <li>No analytics beyond what&#39;s needed to keep the app running reliably</li>
 </ul>
 <hr>
-<h2 id="reporting-and-blocking">Reporting and blocking</h2>
-<p>You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database and a copy (account ids, reason, and the message or vibe id — no message text) is relayed to the team by email through FormSubmit, so they can be acted on within 24 hours. Reports are reviewed by the developer.</p>
+<h2>Reporting and blocking</h2>
+<p>You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database for review. To follow up on a report or appeal a decision, contact the support address below.</p>
 <hr>
-<h2 id="third-party-services">Third-party services</h2>
+<h2>Third-party services</h2>
 <table>
 <thead>
 <tr>
@@ -108,6 +110,11 @@
 <td><a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></td>
 </tr>
 <tr>
+<td>OpenAI (moderation API)</td>
+<td>Automated safety classification of new posts, photos, messages and profile details; on by default, can be turned off in Settings</td>
+<td><a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></td>
+</tr>
+<tr>
 <td>FormSubmit</td>
 <td>Delivers in-app feedback to the team by email</td>
 <td><a href="https://formsubmit.co/privacy">https://formsubmit.co/privacy</a></td>
@@ -119,19 +126,20 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="data-deletion">Data deletion</h2>
+<h2>Data deletion</h2>
 <p>Go to Settings → Delete Account to permanently delete your account, friends list, hangout history, messages, vibe posts, photos, shared location and invite links. This cannot be undone. Signing out (instead of deleting) keeps your data intact for when you sign back in.</p>
 <hr>
-<h2 id="children">Children</h2>
+<h2>Children</h2>
 <p>Cojoin is not directed at children under 13 and does not knowingly collect data from children.</p>
 <hr>
-<h2 id="changes-to-this-policy">Changes to this policy</h2>
+<h2>Changes to this policy</h2>
 <p>If this policy changes, the updated version will be posted at this URL. The &quot;last updated&quot; date at the top will reflect the change.</p>
 <hr>
-<h2 id="contact">Contact</h2>
+<h2>Contact</h2>
 <p>Questions? Use Settings → Help → Send feedback in the app, or email <a href="mailto:andrew.v1.win@gmail.com">andrew.v1.win@gmail.com</a>.</p>
 <hr>
 <p><em>The published version served to users and App Store reviewers is <a href="https://cojoin.io/privacy">https://cojoin.io/privacy</a> (generated from this file). The app repository keeps a copy; keep both in sync when this changes.</em></p>
+
 </main>
 </body>
 </html>
