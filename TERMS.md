@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen ("we", "us"). These terms are the agreement between you and us for using the app. By creating an account or using Cojoin you agree to them and to the [Privacy Policy](https://cojoin.io/privacy). If you do not agree, do not use the app.
 
-**Last updated: September 30, 2026**
+**Last updated: October 5, 2026**
 
 ---
 
@@ -91,7 +91,7 @@ We may update these terms; the date at the top will change and the current versi
 
 ## Contact
 
-Questions? Use Settings → Help → Send feedback in the app, or email andrew.v1.win@gmail.com.
+Questions? Use Settings → Help → Send feedback in the app, or email edwardroh89@gmail.com.
 
 ---
 

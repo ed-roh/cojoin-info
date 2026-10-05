@@ -13,8 +13,8 @@
   h3 { font-size:16px; margin:22px 0 6px; }
   p, li { color:var(--ink70); font-size:15px; }
   a { color:var(--ink); }
-  table { border-collapse:collapse; width:100%; font-size:14px; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1.5px solid var(--rule); vertical-align:top; }
+  table { border-collapse:collapse; width:100%; table-layout:fixed; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1.5px solid var(--rule); vertical-align:top; overflow-wrap:anywhere; }
   th { color:var(--ink); }
   hr { border:0; border-top:1.5px solid var(--rule); margin:28px 0; }
   .back { display:inline-block; margin-bottom:24px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; text-decoration:none; }
@@ -25,7 +25,7 @@
 <a class="back" href="/">← Cojoin</a>
 <h1>Privacy Policy</h1>
 <p><strong>Cojoin</strong> (&quot;the app&quot;) is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.</p>
-<p><strong>Last updated: October 1, 2026</strong></p>
+<p><strong>Last updated: October 5, 2026</strong></p>
 <hr>
 <h2>The short version</h2>
 <p>Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.</p>
@@ -33,11 +33,11 @@
 <h2>What data the app collects</h2>
 <h3>Account data</h3>
 <ul>
-<li>Email address and password (used only for sign-in; passwords are hashed and never visible to us)</li>
+<li>Email address and password (used for sign-in; passwords are hashed and never visible to us). We may also send occasional emails about Cojoin, such as new features or a newsletter. Every such email has an unsubscribe link, and the sign-up screen says this before you create an account.</li>
 <li>Your name and phone number, if you add them to your profile</li>
-<li>A profile photo, if you add one. It is resized on your device and stored in cloud file storage at a public URL, so the friends you connect with can see it next to your name. Removing it in Edit profile deletes the file.</li>
+<li>A profile photo, if you add one. It is resized on your device and stored in private cloud file storage. Authorized viewers receive temporary access links so they can see it next to your name. Removing it in Edit profile deletes the file.</li>
 </ul>
-<p><strong>Where it lives:</strong> Stored in our database (Supabase), access-controlled so only you can read your own account data. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.</p>
+<p><strong>Where it lives:</strong> Stored in our database (Supabase), protected by access controls. Your display name and profile photo are shared where needed for connections, events and conversations; your private account details are not publicly listed. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.</p>
 <p>You can change your email or password in Settings → Account. Both ask for your current password first; an email change is confirmed by links sent to both your old and your new address.</p>
 <h3>Friends data</h3>
 <ul>
@@ -58,6 +58,9 @@
 <li>Message and vibe content is visible to the people you&#39;re messaging or sharing with, consistent with what you post and who you choose to share it with</li>
 </ul>
 <p><strong>Where it lives:</strong> Stored in our database. Vibe photos are stored in cloud file storage.</p>
+<h3>Post-event check-ins and recaps</h3>
+<p>When a host enables a post-event check-in, invited guests and attendees can save a next-time reaction and optional date choices. The host can see who responded and their reaction; other guests see aggregate interest and date counts. Guests who explicitly decline can read that event’s chat and photos after it ends; this does not rejoin them to the chat. Events created before this feature keep their existing audience rules.</p>
+<p>Private event notes submitted through earlier app versions remain private to the host, with no sender name or account ID shown to the host. Cojoin retains the account link for abuse handling and deletion; authorized safety reviewers can review reported notes and their senders. Event notes and responses are stored in our database and removed when the associated event or account is deleted. Opening a next-event draft never publishes it automatically.</p>
 <h3>Location</h3>
 <p>Location sharing is <strong>off until you turn it on</strong> (Profile or Settings → Share my location, or the toggle during onboarding). When it is on, the app asks for while-in-use location permission and stores a <strong>coarse</strong> position — rounded to roughly 1 km — together with a neighbourhood label and a timestamp. It is shown only to friends you are connected with who also share theirs, on the Discover screen&#39;s &quot;Near me&quot;. Your exact coordinates are never stored, and turning sharing off removes your stored position. Nothing in the app depends on location; every other feature works with it off.</p>
 <p>Separately, the Suggestions screen looks up your approximate city from your IP address (ipapi.co) to show weather context for a suggested plan. That request is made from your device directly; Cojoin does not store or log your IP address or location from it.</p>
@@ -66,9 +69,10 @@
 <h3>Automated safety screening</h3>
 <p>Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI&#39;s moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.</p>
 <h3>Notifications</h3>
-<p>If you grant notification permission, Cojoin schedules local reminders on your device (e.g., &quot;You haven&#39;t seen Jordan in a while&quot;). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.</p>
+<p>If you grant notification permission, Cojoin can send server push notifications about messages, connections and events, and schedule local reminders on your device. Device push tokens and notification preferences are stored in Supabase. Push delivery uses Expo and Apple or Google notification services. Push payloads contain routing identifiers; message text is included only when you enable previews. You can change notification categories, previews and sounds in Settings and mute individual conversations.</p>
 <h3>Feedback</h3>
-<p>If you send feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, the optional reply address you enter, your account email, and the app version and device type are emailed to the team through a form-to-email relay (FormSubmit) and kept in our database so nothing is lost. Feedback is used only to improve the app and reply to you.</p>
+<p>If you submit feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, account reference, optional reply email, app version and device type are stored in a restricted support queue in Supabase. Authorized team members review these submissions in the Safety inbox; submitting the form does not automatically send an email. Feedback is used to improve the app and respond to support requests.</p>
+<p>Choosing “Or email us” or “Contact support” opens your mail app addressed to <a href="mailto:edwardroh89@gmail.com">edwardroh89@gmail.com</a>. If the in-app form cannot save, it offers the typed message in your mail app instead. You choose whether to send it. Email correspondence is also held by the email providers used by you and the support team; our support mailbox is hosted by Google (Gmail). The optional reply-email field in the form does not itself send a message or subscribe you to a mailing list.</p>
 <hr>
 <h2>What the app does NOT do</h2>
 <ul>
@@ -115,9 +119,19 @@
 <td><a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></td>
 </tr>
 <tr>
-<td>FormSubmit</td>
-<td>Delivers in-app feedback to the team by email</td>
-<td><a href="https://formsubmit.co/privacy">https://formsubmit.co/privacy</a></td>
+<td>Expo</td>
+<td>Delivers push notifications using device tokens and notification payloads</td>
+<td><a href="https://expo.dev/privacy">https://expo.dev/privacy</a></td>
+</tr>
+<tr>
+<td>Apple / Google</td>
+<td>Deliver notifications to iOS / Android devices</td>
+<td><a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a> / <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></td>
+</tr>
+<tr>
+<td>Google (Gmail)</td>
+<td>Hosts the support mailbox when you choose to email us or receive a support reply</td>
+<td><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></td>
 </tr>
 <tr>
 <td>Vercel</td>
@@ -136,10 +150,9 @@
 <p>If this policy changes, the updated version will be posted at this URL. The &quot;last updated&quot; date at the top will reflect the change.</p>
 <hr>
 <h2>Contact</h2>
-<p>Questions? Use Settings → Help → Send feedback in the app, or email <a href="mailto:andrew.v1.win@gmail.com">andrew.v1.win@gmail.com</a>.</p>
+<p>Questions? Use Settings → Help → Send feedback in the app, or email <a href="mailto:edwardroh89@gmail.com">edwardroh89@gmail.com</a>.</p>
 <hr>
 <p><em>The published version served to users and App Store reviewers is <a href="https://cojoin.io/privacy">https://cojoin.io/privacy</a> (generated from this file). The app repository keeps a copy; keep both in sync when this changes.</em></p>
-
 </main>
 </body>
 </html>

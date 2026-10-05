@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
-**Last updated: October 1, 2026**
+**Last updated: October 5, 2026**
 
 ---
 
@@ -15,11 +15,11 @@ Cojoin requires a free account (email + password) so your friends list, hangout 
 ## What data the app collects
 
 ### Account data
-- Email address and password (used only for sign-in; passwords are hashed and never visible to us)
+- Email address and password (used for sign-in; passwords are hashed and never visible to us). We may also send occasional emails about Cojoin, such as new features or a newsletter. Every such email has an unsubscribe link, and the sign-up screen says this before you create an account.
 - Your name and phone number, if you add them to your profile
-- A profile photo, if you add one. It is resized on your device and stored in cloud file storage at a public URL, so the friends you connect with can see it next to your name. Removing it in Edit profile deletes the file.
+- A profile photo, if you add one. It is resized on your device and stored in private cloud file storage. Authorized viewers receive temporary access links so they can see it next to your name. Removing it in Edit profile deletes the file.
 
-**Where it lives:** Stored in our database (Supabase), access-controlled so only you can read your own account data. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.
+**Where it lives:** Stored in our database (Supabase), protected by access controls. Your display name and profile photo are shared where needed for connections, events and conversations; your private account details are not publicly listed. On your phone, the sign-in session is kept encrypted: the key lives in the iOS Keychain (or Android Keystore) and the encrypted session in app storage.
 
 You can change your email or password in Settings → Account. Both ask for your current password first; an email change is confirmed by links sent to both your old and your new address.
 
@@ -44,6 +44,11 @@ Friend connections are made with single-use invite links or QR codes. A link con
 
 **Where it lives:** Stored in our database. Vibe photos are stored in cloud file storage.
 
+### Post-event check-ins and recaps
+When a host enables a post-event check-in, invited guests and attendees can save a next-time reaction and optional date choices. The host can see who responded and their reaction; other guests see aggregate interest and date counts. Guests who explicitly decline can read that event’s chat and photos after it ends; this does not rejoin them to the chat. Events created before this feature keep their existing audience rules.
+
+Private event notes submitted through earlier app versions remain private to the host, with no sender name or account ID shown to the host. Cojoin retains the account link for abuse handling and deletion; authorized safety reviewers can review reported notes and their senders. Event notes and responses are stored in our database and removed when the associated event or account is deleted. Opening a next-event draft never publishes it automatically.
+
 ### Location
 Location sharing is **off until you turn it on** (Profile or Settings → Share my location, or the toggle during onboarding). When it is on, the app asks for while-in-use location permission and stores a **coarse** position — rounded to roughly 1 km — together with a neighbourhood label and a timestamp. It is shown only to friends you are connected with who also share theirs, on the Discover screen's "Near me". Your exact coordinates are never stored, and turning sharing off removes your stored position. Nothing in the app depends on location; every other feature works with it off.
 
@@ -56,10 +61,12 @@ Cojoin requests camera access to scan a friend's QR code from the add-a-friend s
 Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI's moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.
 
 ### Notifications
-If you grant notification permission, Cojoin schedules local reminders on your device (e.g., "You haven't seen Jordan in a while"). These are generated on-device from your synced data. Cojoin does not send push notifications from a server.
+If you grant notification permission, Cojoin can send server push notifications about messages, connections and events, and schedule local reminders on your device. Device push tokens and notification preferences are stored in Supabase. Push delivery uses Expo and Apple or Google notification services. Push payloads contain routing identifiers; message text is included only when you enable previews. You can change notification categories, previews and sounds in Settings and mute individual conversations.
 
 ### Feedback
-If you send feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, the optional reply address you enter, your account email, and the app version and device type are emailed to the team through a form-to-email relay (FormSubmit) and kept in our database so nothing is lost. Feedback is used only to improve the app and reply to you.
+If you submit feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, account reference, optional reply email, app version and device type are stored in a restricted support queue in Supabase. Authorized team members review these submissions in the Safety inbox; submitting the form does not automatically send an email. Feedback is used to improve the app and respond to support requests.
+
+Choosing “Or email us” or “Contact support” opens your mail app addressed to edwardroh89@gmail.com. If the in-app form cannot save, it offers the typed message in your mail app instead. You choose whether to send it. Email correspondence is also held by the email providers used by you and the support team; our support mailbox is hosted by Google (Gmail). The optional reply-email field in the form does not itself send a message or subscribe you to a mailing list.
 
 ---
 
@@ -86,7 +93,9 @@ You can report or block anyone who messages you directly from a chat thread. Blo
 | ipapi.co | City-level location from IP, for weather context only | https://ipapi.co/privacy |
 | Open-Meteo | Weather forecast | https://open-meteo.com/en/terms |
 | OpenAI (moderation API) | Automated safety classification of new posts, photos, messages and profile details; on by default, can be turned off in Settings | https://openai.com/policies/privacy-policy |
-| FormSubmit | Delivers in-app feedback to the team by email | https://formsubmit.co/privacy |
+| Expo | Delivers push notifications using device tokens and notification payloads | https://expo.dev/privacy |
+| Apple / Google | Deliver notifications to iOS / Android devices | https://www.apple.com/legal/privacy/ / https://policies.google.com/privacy |
+| Google (Gmail) | Hosts the support mailbox when you choose to email us or receive a support reply | https://policies.google.com/privacy |
 | Vercel | Hosts cojoin.io (this page and the invite hand-off page) | https://vercel.com/legal/privacy-policy |
 
 ---
@@ -111,7 +120,7 @@ If this policy changes, the updated version will be posted at this URL. The "las
 
 ## Contact
 
-Questions? Use Settings → Help → Send feedback in the app, or email andrew.v1.win@gmail.com.
+Questions? Use Settings → Help → Send feedback in the app, or email edwardroh89@gmail.com.
 
 ---
 
