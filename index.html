@@ -7,73 +7,81 @@
 <meta name="description" content="Cojoin helps you actually see the people who matter most. Now in beta on iPhone through TestFlight.">
 <script>(function(){var ua=navigator.userAgent;var ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);if(ios)document.documentElement.className+=' ios';})();</script>
 <style>
-  :root { --ink:#100E14; --ground:#FBF8F2; --mint:#9FE8B4; --ink70:rgba(16,14,20,.72); }
-  html,body { margin:0; background:var(--ground); color:var(--ink); font-family: -apple-system, "Space Grotesk", Helvetica, Arial, sans-serif; }
-  main { max-width:520px; margin:0 auto; padding:56px 20px 80px; }
-  h1 { font-size:56px; line-height:.95; letter-spacing:-.03em; text-transform:uppercase; margin:0 0 14px; }
-  p { font-size:16px; line-height:1.5; color:var(--ink70); }
-  .rule { height:3px; background:var(--ink); margin:22px 0; }
+  :root { --ink:#100E14; --ground:#FBF8F2; --mint:#9FE8B4; --ink70:rgba(16,14,20,.72); --ink15:rgba(16,14,20,.15); }
+  html,body { margin:0; background:var(--ground); color:var(--ink); font-family:-apple-system, "Space Grotesk", Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  main { max-width:580px; margin:0 auto; padding:64px 20px 72px; }
+  h1 { font-size:60px; line-height:.95; letter-spacing:-.03em; text-transform:uppercase; margin:0 0 16px; }
+  p { font-size:16px; line-height:1.55; color:var(--ink70); margin:0; }
+  p strong { color:var(--ink); }
   a { color:var(--ink); }
-  ul { padding-left:18px; color:var(--ink70); line-height:1.6; }
+  .lede { font-size:18px; max-width:30em; }
+  .rule { height:3px; background:var(--ink); margin:36px 0; }
 
   /* Beta install via TestFlight. Replace this section with one App Store button once the listing is live. */
-  .tag { display:inline-block; background:var(--mint); color:var(--ink); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 8px; margin:0 0 12px; }
-  .beta h2 { font-size:34px; line-height:1; letter-spacing:-.02em; text-transform:uppercase; margin:0 0 10px; }
-  .beta > p { margin:0 0 22px; }
-  .steps { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  .step { border:2px solid var(--ink); padding:18px 18px 20px; display:flex; flex-direction:column; align-items:flex-start; }
-  .n { display:inline-grid; place-items:center; width:28px; height:28px; border-radius:14px; background:var(--ink); color:var(--ground); font-weight:700; font-size:14px; margin-bottom:12px; }
-  .step h3 { margin:0 0 6px; font-size:19px; line-height:1.2; }
-  .step p { margin:0 0 16px; font-size:15px; }
-  .qr { margin:0 0 12px; width:100%; max-width:200px; align-self:center; }
-  .qr svg { display:block; width:100%; height:auto; background:#fff; padding:10px; box-sizing:border-box; }
-  .qr figcaption { font-size:12px; color:var(--ink70); text-align:center; margin-top:8px; }
-  .link { font-size:13px; word-break:break-all; margin-top:auto; }
-  .btn { display:none; background:var(--ink); color:var(--ground); text-decoration:none; padding:16px 18px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:13px; width:100%; box-sizing:border-box; text-align:center; }
-  .fine { font-size:13px; margin:18px 0 0; }
-  @media (max-width:479px) { .steps { grid-template-columns:1fr; } }
-  @media (min-width:480px) { html:not(.ios) .step p { min-height:3em; } }
+  .tag { display:inline-block; background:var(--mint); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:5px 9px; margin:0 0 14px; }
+  .beta h2 { font-size:36px; line-height:1; letter-spacing:-.02em; text-transform:uppercase; margin:0 0 12px; }
+  .beta .intro { margin-bottom:26px; max-width:32em; }
+  .steps { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .step { border:2px solid var(--ink); padding:24px 22px 22px; display:flex; flex-direction:column; }
+  .step h3 { display:flex; align-items:center; gap:10px; margin:0 0 8px; font-size:19px; line-height:1.2; }
+  .n { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; border-radius:13px; background:var(--ink); color:var(--ground); font-size:13px; font-weight:700; }
+  .how { font-size:15px; }
+  .qr { margin:20px auto 0; width:176px; }
+  .qr svg { display:block; width:100%; height:auto; background:#fff; padding:12px; box-sizing:border-box; border:1px solid var(--ink15); }
+  .qr figcaption { font-size:12px; color:var(--ink70); text-align:center; margin-top:10px; }
+  .link { display:block; margin-top:auto; padding-top:18px; font-size:13px; line-height:1.4; overflow-wrap:anywhere; }
+  .btn { display:none; margin-top:18px; background:var(--ink); color:var(--ground); text-decoration:none; padding:16px 18px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:13px; text-align:center; }
+  .fine { font-size:13px; margin-top:18px; }
+  @media (max-width:519px) { .steps { grid-template-columns:1fr; } }
+  @media (min-width:520px) { html:not(.ios) .how { min-height:3em; } }
   /* On an iPhone or iPad the screen can't scan itself: show tap targets instead of QR codes. */
   .ios .qr, .ios .link { display:none; }
   .ios .btn { display:block; }
-  .ios .steps { grid-template-columns:1fr; }
+  .ios .steps { grid-template-columns:1fr; gap:16px; }
+
+  .help { display:grid; gap:16px; }
+  footer { margin-top:36px; padding-top:20px; border-top:1px solid var(--ink15); display:flex; flex-wrap:wrap; gap:8px 24px; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+  footer a { text-decoration:none; }
+  footer a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
 <main>
   <h1>Cojoin</h1>
-  <p>Keep seeing the people who matter. Log hangouts, keep streaks, cast a vibe, and find out who's around tonight.</p>
+  <p class="lede">Keep seeing the people who matter. Log hangouts, keep streaks, cast a vibe, and find out who's around tonight.</p>
   <div class="rule"></div>
-  <ul>
-    <li><a href="/privacy">Privacy policy</a> · <a href="/terms">Terms of use</a></li>
-    <li>Support: use Settings → Help in the app, or <a href="mailto:edwardroh89@gmail.com">edwardroh89@gmail.com</a></li>
-    <li>Got an invite link? Open it on your phone; it takes you into the app.</li>
-  </ul>
-  <div class="rule"></div>
-  <section class="beta" id="beta" aria-labelledby="beta-heading">
+  <section class="beta" aria-labelledby="beta-heading">
     <span class="tag">Beta · iPhone</span>
     <h2 id="beta-heading">Get Cojoin</h2>
-    <p>Cojoin is in beta, so it installs through Apple's free TestFlight app instead of the App Store. Two steps, about a minute.</p>
+    <p class="intro">Cojoin is in beta, so it installs through Apple's free TestFlight app instead of the App Store. Two steps, about a minute.</p>
     <ol class="steps" role="list">
       <li class="step">
-        <span class="n">1</span>
-        <h3>Install TestFlight</h3>
-        <p>Open it once after it installs.</p>
+        <h3><span class="n">1</span>Install TestFlight</h3>
+        <p class="how">Open it once after it installs.</p>
         <figure class="qr"><svg role="img" aria-label="QR code: TestFlight on the App Store" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path stroke="#100E14" d="M0 0.5h7m3 0h1m2 0h2m1 0h5m2 0h1m2 0h7M0 1.5h1m5 0h1m3 0h1m1 0h6m2 0h2m2 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h6m1 0h2m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h3m2 0h3m1 0h2m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h1m1 0h2m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h3m2 0h1m1 0h2m3 0h2m1 0h1m2 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m3 0h1m1 0h2m5 0h2M0 8.5h1m1 0h5m2 0h1m3 0h3m1 0h2m3 0h3m1 0h5M3 9.5h3m1 0h2m3 0h1m1 0h1m1 0h1m1 0h7m1 0h2m1 0h2m1 0h1M3 10.5h2m1 0h4m2 0h1m2 0h1m2 0h1m1 0h2m4 0h1m1 0h1m1 0h2M0 11.5h1m3 0h2m4 0h3m1 0h3m2 0h1m1 0h1m1 0h3m2 0h3M1 12.5h2m2 0h2m1 0h3m1 0h1m2 0h1m2 0h1m2 0h1m3 0h1m1 0h3m1 0h2M0 13.5h6m1 0h2m1 0h1m1 0h6m2 0h2m1 0h2m1 0h1m4 0h2M0 14.5h3m1 0h5m2 0h1m1 0h1m3 0h1m1 0h1m1 0h1m3 0h2m1 0h4M1 15.5h1m1 0h1m5 0h1m1 0h1m2 0h1m1 0h1m2 0h3m1 0h4m1 0h3M0 16.5h1m1 0h1m2 0h8m1 0h1m1 0h2m1 0h1m2 0h1m2 0h1m1 0h2m3 0h1M2 17.5h1m1 0h2m1 0h1m3 0h4m1 0h5m1 0h2m2 0h2m1 0h2m1 0h1M0 18.5h2m1 0h1m2 0h4m1 0h2m1 0h4m4 0h1m1 0h2m1 0h2m1 0h2M0 19.5h1m3 0h1m3 0h1m1 0h1m2 0h1m2 0h5m3 0h1m2 0h4m1 0h1M0 20.5h5m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m2 0h3m1 0h1M0 21.5h2m8 0h1m1 0h1m1 0h2m2 0h1m2 0h1m2 0h2m1 0h1m1 0h2m1 0h1M0 22.5h1m3 0h4m1 0h1m1 0h2m2 0h2m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h1M0 23.5h1m1 0h3m3 0h2m5 0h1m5 0h1m1 0h1m1 0h1m3 0h2M0 24.5h1m1 0h1m2 0h2m1 0h2m3 0h3m1 0h1m4 0h1m1 0h5m3 0h1M8 25.5h1m2 0h4m4 0h1m1 0h1m1 0h2m3 0h1m1 0h1m1 0h1M0 26.5h7m2 0h1m2 0h1m1 0h2m2 0h1m1 0h2m1 0h2m1 0h1m1 0h1m1 0h2M0 27.5h1m5 0h1m1 0h8m4 0h5m3 0h3M0 28.5h1m1 0h3m1 0h1m1 0h3m3 0h2m2 0h1m2 0h1m2 0h6m1 0h1M0 29.5h1m1 0h3m1 0h1m1 0h2m4 0h3m3 0h1m1 0h1m1 0h2m2 0h1m3 0h1M0 30.5h1m1 0h3m1 0h1m1 0h5m5 0h2m1 0h2m1 0h4m2 0h1M0 31.5h1m5 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h4m6 0h3M0 32.5h7m1 0h2m1 0h2m3 0h2m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1"/></svg><figcaption>Scan with your iPhone camera</figcaption></figure>
         <a class="btn" href="https://apps.apple.com/app/testflight/id899247664">Get TestFlight</a>
         <a class="link" href="https://apps.apple.com/app/testflight/id899247664">TestFlight on the App Store</a>
       </li>
       <li class="step">
-        <span class="n">2</span>
-        <h3>Install Cojoin</h3>
-        <p>Tap <strong>Start Testing</strong>, then <strong>Install</strong>.</p>
+        <h3><span class="n">2</span>Install Cojoin</h3>
+        <p class="how">Tap <strong>Start Testing</strong>, then <strong>Install</strong>.</p>
         <figure class="qr"><svg role="img" aria-label="QR code: join the Cojoin beta on TestFlight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#100E14" d="M0 0.5h7m5 0h1m1 0h7m1 0h7M0 1.5h1m5 0h1m2 0h5m1 0h1m6 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m1 0h2m2 0h1m2 0h1m3 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m5 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h3m1 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m1 0h1m2 0h3m6 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m2 0h1m2 0h3M0 8.5h1m1 0h5m2 0h1m4 0h5m1 0h1m1 0h5M3 9.5h2m2 0h3m4 0h1m2 0h8m3 0h1M3 10.5h2m1 0h1m2 0h1m2 0h1m2 0h3m2 0h1m3 0h1M2 11.5h3m3 0h1m1 0h2m2 0h1m1 0h1m1 0h1m2 0h5m1 0h1M2 12.5h1m1 0h1m1 0h3m2 0h1m1 0h1m3 0h1m5 0h1m1 0h2M0 13.5h2m1 0h1m1 0h1m5 0h1m2 0h1m3 0h7m3 0h1M3 14.5h1m2 0h1m1 0h3m1 0h2m1 0h1m1 0h2m3 0h2m1 0h2M4 15.5h1m2 0h4m1 0h1m1 0h1m1 0h1m2 0h3m2 0h1m2 0h1M1 16.5h4m1 0h1m2 0h1m4 0h1m2 0h1m1 0h1m3 0h1m1 0h2M0 17.5h2m1 0h1m3 0h2m1 0h2m4 0h4m1 0h4m1 0h1m1 0h1M0 18.5h1m4 0h2m1 0h1m1 0h2m3 0h3m3 0h4m1 0h1M0 19.5h1m2 0h3m2 0h5m1 0h2m4 0h1m2 0h2m2 0h1M0 20.5h1m1 0h1m1 0h3m1 0h2m1 0h4m2 0h1m2 0h5m1 0h3M8 21.5h6m2 0h5m3 0h5M0 22.5h7m3 0h1m3 0h3m2 0h2m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m3 0h1m2 0h2M0 24.5h1m1 0h3m1 0h1m1 0h4m5 0h2m1 0h5m1 0h3M0 25.5h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m2 0h3m6 0h4M0 26.5h1m1 0h3m1 0h1m1 0h2m4 0h2m1 0h1m2 0h8M0 27.5h1m5 0h1m2 0h1m2 0h1m1 0h1m5 0h1m3 0h2m1 0h1M0 28.5h7m1 0h2m2 0h2m3 0h1m1 0h1m2 0h5"/></svg><figcaption>Scan with your iPhone camera</figcaption></figure>
         <a class="btn" href="https://testflight.apple.com/join/4XRWQ3Am">Join the Cojoin beta</a>
-        <a class="link" href="https://testflight.apple.com/join/4XRWQ3Am">testflight.apple.com/join/4XRWQ3Am</a>
+        <a class="link" href="https://testflight.apple.com/join/4XRWQ3Am">testflight.apple.com/join/<wbr>4XRWQ3Am</a>
       </li>
     </ol>
     <p class="fine">Already have TestFlight? Go straight to step 2. Android isn't available yet.</p>
   </section>
+  <div class="rule"></div>
+  <section class="help" aria-label="Good to know">
+    <p><strong>Got an invite link?</strong> Open it on your phone and it takes you straight into the app.</p>
+    <p><strong>Need help?</strong> Use Settings → Help in the app, or email <a href="mailto:edwardroh89@gmail.com">edwardroh89@gmail.com</a>.</p>
+  </section>
+  <footer>
+    <a href="/privacy">Privacy policy</a>
+    <a href="/terms">Terms of use</a>
+    <a href="/support">Support</a>
+  </footer>
 </main>
 </body>
 </html>
