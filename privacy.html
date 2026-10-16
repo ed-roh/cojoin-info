@@ -25,7 +25,7 @@
 <a class="back" href="/">← Cojoin</a>
 <h1>Privacy Policy</h1>
 <p><strong>Cojoin</strong> (&quot;the app&quot;) is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.</p>
-<p><strong>Last updated: October 5, 2026</strong></p>
+<p><strong>Last updated: October 16, 2026</strong></p>
 <hr>
 <h2>The short version</h2>
 <p>Cojoin requires a free account (email + password) so your friends list, hangout history, and messages stay in sync across your devices. We store your data securely and never sell it or use it for advertising. You can delete your account and everything tied to it at any time from Settings.</p>
@@ -70,6 +70,8 @@
 <p>Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI&#39;s moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.</p>
 <h3>Notifications</h3>
 <p>If you grant notification permission, Cojoin can send server push notifications about messages, connections and events, and schedule local reminders on your device. Device push tokens and notification preferences are stored in Supabase. Push delivery uses Expo and Apple or Google notification services. Push payloads contain routing identifiers; message text is included only when you enable previews. You can change notification categories, previews and sounds in Settings and mute individual conversations.</p>
+<h3>Text messages (SMS)</h3>
+<p>Cojoin sends text messages only to verify a phone number you add to your account and for account-security notices tied to that number. You opt in inside the app: on the phone-number step you enter your number and tick an unticked box (or tap “Send code”) that says you agree to receive verification texts from Cojoin. Message frequency varies (normally one or two texts per verification request). Message and data rates may apply. Reply STOP to stop receiving texts and HELP for help; you can also remove your number in the app. Consent is not a condition of using Cojoin. Texts are delivered through Twilio, which processes your phone number only to deliver the message. <strong>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.</strong></p>
 <h3>Feedback</h3>
 <p>If you submit feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, account reference, optional reply email, app version and device type are stored in a restricted support queue in Supabase. Authorized team members review these submissions in the Safety inbox; submitting the form does not automatically send an email. Feedback is used to improve the app and respond to support requests.</p>
 <p>Choosing “Or email us” or “Contact support” opens your mail app addressed to <a href="mailto:edwardroh89@gmail.com">edwardroh89@gmail.com</a>. If the in-app form cannot save, it offers the typed message in your mail app instead. You choose whether to send it. Email correspondence is also held by the email providers used by you and the support team; our support mailbox is hosted by Google (Gmail). The optional reply-email field in the form does not itself send a message or subscribe you to a mailing list.</p>
@@ -117,6 +119,11 @@
 <td>OpenAI (moderation API)</td>
 <td>Automated safety classification of new posts, photos, messages and profile details; on by default, can be turned off in Settings</td>
 <td><a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></td>
+</tr>
+<tr>
+<td>Twilio</td>
+<td>Delivers phone-number verification texts (SMS) when you add a phone number</td>
+<td><a href="https://www.twilio.com/en-us/legal/privacy">https://www.twilio.com/en-us/legal/privacy</a></td>
 </tr>
 <tr>
 <td>Expo</td>

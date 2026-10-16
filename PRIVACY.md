@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
-**Last updated: October 5, 2026**
+**Last updated: October 16, 2026**
 
 ---
 
@@ -63,6 +63,9 @@ Cojoin checks new content for abuse so people can see posts and messages right a
 ### Notifications
 If you grant notification permission, Cojoin can send server push notifications about messages, connections and events, and schedule local reminders on your device. Device push tokens and notification preferences are stored in Supabase. Push delivery uses Expo and Apple or Google notification services. Push payloads contain routing identifiers; message text is included only when you enable previews. You can change notification categories, previews and sounds in Settings and mute individual conversations.
 
+### Text messages (SMS)
+Cojoin sends text messages only to verify a phone number you add to your account and for account-security notices tied to that number. You opt in inside the app: on the phone-number step you enter your number and tick an unticked box (or tap “Send code”) that says you agree to receive verification texts from Cojoin. Message frequency varies (normally one or two texts per verification request). Message and data rates may apply. Reply STOP to stop receiving texts and HELP for help; you can also remove your number in the app. Consent is not a condition of using Cojoin. Texts are delivered through Twilio, which processes your phone number only to deliver the message. **We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.**
+
 ### Feedback
 If you submit feedback or a bug report from Settings → Help (or Profile → Send feedback), your message, account reference, optional reply email, app version and device type are stored in a restricted support queue in Supabase. Authorized team members review these submissions in the Safety inbox; submitting the form does not automatically send an email. Feedback is used to improve the app and respond to support requests.
 
@@ -93,6 +96,7 @@ You can report or block anyone who messages you directly from a chat thread. Blo
 | ipapi.co | City-level location from IP, for weather context only | https://ipapi.co/privacy |
 | Open-Meteo | Weather forecast | https://open-meteo.com/en/terms |
 | OpenAI (moderation API) | Automated safety classification of new posts, photos, messages and profile details; on by default, can be turned off in Settings | https://openai.com/policies/privacy-policy |
+| Twilio | Delivers phone-number verification texts (SMS) when you add a phone number | https://www.twilio.com/en-us/legal/privacy |
 | Expo | Delivers push notifications using device tokens and notification payloads | https://expo.dev/privacy |
 | Apple / Google | Deliver notifications to iOS / Android devices | https://www.apple.com/legal/privacy/ / https://policies.google.com/privacy |
 | Google (Gmail) | Hosts the support mailbox when you choose to email us or receive a support reply | https://policies.google.com/privacy |
