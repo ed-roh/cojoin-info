@@ -27,5 +27,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/v/:id",
+      "destination": "/join?event=:id"
+    }
   ]
 }

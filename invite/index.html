@@ -26,10 +26,11 @@
   <p>Someone wants to connect with you on Cojoin, the app for actually seeing your friends.</p>
   <div class="rule"></div>
   <a id="open" class="btn primary" href="#">Open in Cojoin <span class="dot"></span></a>
-  <a id="store" class="btn outline" href="https://apps.apple.com/app/id6800561537">Get Cojoin on the App Store</a>
+  <a id="store-ios" class="btn outline" href="https://apps.apple.com/app/id6800561537">Get Cojoin on the App Store</a>
+  <a id="store-android" class="btn outline" href="https://play.google.com/store/apps/details?id=com.andrewv1.showup">Get Cojoin on Google Play</a>
   <p id="hint" style="margin-top:22px">Already installed? Tap <strong>Open in Cojoin</strong>. New here? Install the app, then open this link again — or in Cojoin go to <em>Add a friend → Scan their QR code</em> and paste the link below:</p>
   <code id="token">…</code>
-  <small>Cojoin never sees your contacts or messages. Invite links expire after 7 days.</small>
+  <small>Only contacts you choose to save are synced to your private account. In-app messages are stored for their participants. Invite links expire after 7 days and work once.</small>
 </main>
 <script>
   (function () {
@@ -39,9 +40,20 @@
     var open = document.getElementById('open');
     document.getElementById('token').textContent = token || 'missing token';
     if (!token) { open.style.display = 'none'; document.getElementById('hint').textContent = 'This invite link is missing its code. Ask your friend to send it again.'; return; }
-    open.href = scheme;
-    // Try the app first; if nothing handles the scheme the page simply stays.
-    setTimeout(function () { try { location.href = scheme; } catch (e) {} }, 300);
+    // Android: an intent:// link opens the app when installed and falls back to
+    // the Play listing otherwise (Chrome only honours it on a tap, so the
+    // button is the real path there). iOS: the custom scheme, App Store below.
+    var isAndroid = /android/i.test(navigator.userAgent);
+    var play = 'https://play.google.com/store/apps/details?id=com.andrewv1.showup';
+    var intent = 'intent://connect?token=' + encodeURIComponent(token) +
+      '#Intent;scheme=cojoin;package=com.andrewv1.showup;S.browser_fallback_url=' + encodeURIComponent(play) + ';end';
+    var target = isAndroid ? intent : scheme;
+    open.href = target;
+    var storeIos = document.getElementById('store-ios');
+    var storeAndroid = document.getElementById('store-android');
+    if (isAndroid) storeIos.parentNode.insertBefore(storeAndroid, storeIos);
+    // Try the app first; if nothing handles the link the page simply stays.
+    setTimeout(function () { try { location.href = target; } catch (e) {} }, 300);
   })();
 </script>
 </body>
