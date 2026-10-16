@@ -1,8 +1,8 @@
-# Terms of Service
+# Terms of Use
 
 **Cojoin** ("the app") is built by Andrew Nguyen ("we", "us"). These terms are the agreement between you and us for using the app. By creating an account or using Cojoin you agree to them and to the [Privacy Policy](https://cojoin.io/privacy). If you do not agree, do not use the app.
 
-**Last updated: October 16, 2026**
+**Last updated: October 5, 2026**
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## Your content
 
-You own what you put into Cojoin: vibes, plans, messages, photos, friend notes and hangout history. So that the app can work, you give us permission to store that content and to show it to the people you choose to share it with (the audience you pick on a vibe, the people in a chat, the friends you connect with). We do not sell it, use it for advertising, or use it beyond operating and protecting the service. Authorized safety reviewers and service providers may process content as explained in the Privacy Policy.
+You own what you put into Cojoin: vibes, plans, messages, photos, friend notes and hangout history. So that the app can work, you give us permission to store that content and to show it to the people you choose to share it with (the audience you pick on a vibe, the people in a chat, the friends you connect with). We do not sell it, use it for advertising, or show it to anyone you have not shared it with.
 
 You are responsible for the content you post and the messages you send.
 
@@ -35,7 +35,7 @@ Cojoin is for seeing your friends in person. There is **no tolerance** for:
 - posting other people's private information without their consent;
 - anything else that is unlawful or abusive.
 
-Profiles, vibes and messages may be screened by an automated safety service and reviewed by a moderator before or after they are shown (see the Privacy Policy for the services involved). We may remove content and suspend or delete accounts that break these rules, without notice. Reports are reviewed through a restricted safety queue. Confirmed violations may result in content removal or account suspension. Contact support to appeal a decision.
+Profiles, vibes and messages may be screened by an automated safety service and reviewed by a moderator before or after they are shown (see the Privacy Policy for the services involved). We may remove content and suspend or delete accounts that break these rules, without notice. Reports are reviewed by the developer; objectionable content is removed and the account that posted it is ejected within 24 hours of a report being received.
 
 ---
 
@@ -50,16 +50,6 @@ You can report any vibe, message or person, and block anyone, from inside the ap
 - Invite links and QR codes connect two accounts. Only send invites to people who want to hear from you. Texts you send from the invite screens come from your own phone and are your responsibility.
 - People you import from your contacts become private entries in your friends list. Importing never sends a message on its own.
 - Location sharing is off until you turn it on. When on, connected friends who also share can see roughly where you are (about one kilometre). Turn it off any time in Settings.
-
----
-
-## SMS Terms
-
-- Cojoin sends text messages (SMS) only to verify a phone number you add to your account and for account-security notices about that number. We do not send marketing texts.
-- You opt in inside the app by entering your phone number and ticking the unticked consent box (or tapping “Send code”) on the phone-number step. Consent is not a condition of using Cojoin.
-- Message frequency varies; a verification request normally results in one or two texts. **Message and data rates may apply.** Your carrier's charges are your responsibility; carriers are not liable for delayed or undelivered messages.
-- Reply **STOP** to any Cojoin text to stop receiving texts (you will get one final confirmation), or remove your number in the app. Reply **HELP** for help, or email the address under Contact.
-- How we handle your number is described in the [Privacy Policy](https://cojoin.io/privacy). We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.
 
 ---
 
