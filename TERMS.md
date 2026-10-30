@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen ("we", "us"). These terms are the agreement between you and us for using the app. By creating an account or using Cojoin you agree to them and to the [Privacy Policy](https://cojoin.io/privacy). If you do not agree, do not use the app.
 
-**Last updated: October 16, 2026**
+**Last updated: October 30, 2026**
 
 ---
 
@@ -55,10 +55,11 @@ You can report any vibe, message or person, and block anyone, from inside the ap
 
 ## SMS Terms
 
-- Cojoin sends text messages (SMS) only to verify a phone number you add to your account and for account-security notices about that number. We do not send marketing texts.
-- You opt in inside the app by entering your phone number and ticking the unticked consent box (or tapping “Send code”) on the phone-number step. Consent is not a condition of using Cojoin.
-- Message frequency varies; a verification request normally results in one or two texts. **Message and data rates may apply.** Your carrier's charges are your responsibility; carriers are not liable for delayed or undelivered messages.
-- Reply **STOP** to any Cojoin text to stop receiving texts (you will get one final confirmation), or remove your number in the app. Reply **HELP** for help, or email the address under Contact.
+- **Program:** Cojoin verification texts, sent by COJOIN LLC, which operates Cojoin. They are one-time codes that confirm a phone number is yours, sent when you sign up, add or change your number on your profile, or RSVP to an event from a shared link. We do not send marketing texts.
+- **Opting in:** you enter your phone number, tick the unticked box that says you agree to receive verification texts from Cojoin, and tap “Send code” (or “Create account” when you sign up). No text is sent until the box is ticked. Consent is not a condition of any purchase.
+- **Message frequency varies;** a verification request normally results in one or two texts. **Message and data rates may apply.** Your carrier's charges are your responsibility. Carriers are not liable for any delayed or undelivered messages.
+- **Opting out and help:** reply **STOP** to any Cojoin text to stop receiving texts (you will get one final confirmation), or remove your number in the app. Reply **HELP** for help.
+- **Support:** email [edwardroh89@gmail.com](mailto:edwardroh89@gmail.com) or visit [cojoin.io/support](https://cojoin.io/support).
 - How we handle your number is described in the [Privacy Policy](https://cojoin.io/privacy). We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.
 
 ---
