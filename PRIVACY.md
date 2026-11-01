@@ -2,7 +2,7 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen. This privacy policy explains what data the app collects, where it lives, and what it does not do.
 
-**Last updated: October 30, 2026**
+**Last updated: October 31, 2026**
 
 ---
 
@@ -31,7 +31,7 @@ You can change your email or password in Settings → Account. Both ask for your
 **Where it lives:** Synced to our database and cached on your device for offline use. This data is private to your account — other users cannot see your friends list.
 
 ### Contacts
-If you choose **Import from contacts**, Cojoin asks for access to your address book and shows it to you on your device so you can pick people. Only the people you tick are saved — their name and phone number become entries in your friends list (above). The rest of your address book is never read into the app's storage, uploaded, or matched against other users. You can add friends without ever granting contacts access.
+If you choose **Import from contacts**, the app first shows a page explaining what will be uploaded and asks you to continue; only then does it ask iOS or Android for access to your address book, which is shown on your device so you can pick people. **For each person you pick, their name and phone number are uploaded to our server (Supabase, hosted in the United States) and saved to your private friends list.** We use them for one thing: to show that person in your friends list, so you can invite them by text from your own phone and so they appear as connected when they join through your invite. The rest of your address book is never uploaded, stored, or matched against other users, and no one is contacted unless you send the invite yourself. You can remove an imported person from your friends list at any time, and deleting your account deletes them all. You can add friends without ever granting contacts access.
 
 ### Invites and connections
 Friend connections are made with single-use invite links or QR codes. A link contains a random token tied to your account; when a friend opens it, the two accounts are connected and each of you gets the other's display name. Links expire after 7 days. Opening a link in a browser shows a short page on cojoin.io that hands off to the app; that page does not set cookies or collect anything.
@@ -58,7 +58,7 @@ Separately, the Suggestions screen looks up your approximate city from your IP a
 Cojoin requests camera access to scan a friend's QR code from the add-a-friend sheet, and photo-library access to attach a photo to a vibe or plan if you choose to. Photos you don't choose to attach are never captured or stored.
 
 ### Automated safety screening
-Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI's moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is hidden and reviewed by a person on the Cojoin team, who can remove it or restrict the account. You can turn automated screening off in Settings; your content then goes only to human review. Appeals and report outcomes are under Settings → My reports.
+Cojoin checks new content for abuse so people can see posts and messages right away. When you post a vibe, add a photo, send a message or change your profile name or photo, that content is visible to its audience immediately and is screened shortly afterwards. By default the text and any image are sent to OpenAI's moderation service, which returns only a safety classification and does not keep or train on the content; nothing else about you is sent. Content that is flagged, or that someone reports, is reviewed by a person on the Cojoin team within 24 hours, who removes content that breaks the Terms and suspends the account behind it. Anything you report disappears from your own app right away. You can turn automated screening off under Profile → Privacy; your content then goes only to human review. Appeals and report outcomes are under Profile → My reports.
 
 ### Notifications
 If you grant notification permission, Cojoin can send server push notifications about messages, connections and events, and schedule local reminders on your device. Device push tokens and notification preferences are stored in Supabase. Push delivery uses Expo and Apple or Google notification services. Push payloads contain routing identifiers; message text is included only when you enable previews. You can change notification categories, previews and sounds in Settings and mute individual conversations.
@@ -83,7 +83,7 @@ Choosing “Or email us” or “Contact support” opens your mail app addresse
 
 ## Reporting and blocking
 
-You can report or block anyone who messages you directly from a chat thread. Blocking prevents that person from messaging you again; you can review and undo blocks anytime under Settings → Blocked. Reports are stored in our database for review. To follow up on a report or appeal a decision, contact the support address below.
+You can report any vibe, photo, message or person, and block anyone, from inside the app. What you report is hidden for you immediately and reviewed by the Cojoin team within 24 hours; content that breaks the Terms is removed and the account behind it is suspended. Blocking hides that person's content from you at once, prevents them from messaging you, and notifies the safety team; you can review and undo blocks under Profile → Privacy → Blocked. Reports are stored in our database for review. To follow up on a report or appeal a decision, use Profile → Contact support in the app or the address below.
 
 ---
 
@@ -112,7 +112,7 @@ Go to Settings → Delete Account to permanently delete your account, friends li
 
 ## Children
 
-Cojoin is not directed at children under 13 and does not knowingly collect data from children.
+Cojoin is for adults: you must be 18 or older to use it. It is not directed at children, and we do not knowingly collect data from anyone under 18. If you believe someone under 18 is using Cojoin, email us and we will delete the account.
 
 ---
 
@@ -124,7 +124,7 @@ If this policy changes, the updated version will be posted at this URL. The "las
 
 ## Contact
 
-Questions? Use Settings → Help → Send feedback in the app, or email edwardroh89@gmail.com.
+Questions? Use Profile → Contact support (or Send feedback) in the app, or email edwardroh89@gmail.com.
 
 ---
 

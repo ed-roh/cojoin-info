@@ -2,13 +2,13 @@
 
 **Cojoin** ("the app") is built by Andrew Nguyen ("we", "us"). These terms are the agreement between you and us for using the app. By creating an account or using Cojoin you agree to them and to the [Privacy Policy](https://cojoin.io/privacy). If you do not agree, do not use the app.
 
-**Last updated: October 30, 2026**
+**Last updated: October 31, 2026**
 
 ---
 
 ## Who can use Cojoin
 
-- You must be at least 13 years old.
+- You must be at least 18 years old.
 - Give accurate account details and keep your password to yourself. You are responsible for what happens under your account.
 - One account per person. Do not impersonate anyone.
 
@@ -35,20 +35,20 @@ Cojoin is for seeing your friends in person. There is **no tolerance** for:
 - posting other people's private information without their consent;
 - anything else that is unlawful or abusive.
 
-Profiles, vibes and messages may be screened by an automated safety service and reviewed by a moderator before or after they are shown (see the Privacy Policy for the services involved). We may remove content and suspend or delete accounts that break these rules, without notice. Reports are reviewed through a restricted safety queue. Confirmed violations may result in content removal or account suspension. Contact support to appeal a decision.
+Profiles, vibes, photos and messages are screened by an automated safety service and may be reviewed by a moderator before or after they are shown (see the Privacy Policy for the services involved). **We act on every report within 24 hours:** content that breaks these rules is removed, and the account that posted it is suspended or removed, without notice. Contact support to appeal a decision.
 
 ---
 
 ## Reporting and blocking
 
-You can report any vibe, message or person, and block anyone, from inside the app: hold a message, or open the menu on a chat or vibe page. Blocking stops that person from messaging you and hides their content from you. You can undo a block under Settings → Blocked.
+You can report any vibe, photo, message or person, and block anyone, from inside the app: the ⋯ menu on a vibe, the Report button on a vibe page or on a photo, or tap a message. Anything you report disappears from your app right away, and we review it within 24 hours. Blocking hides that person's vibes, photos and messages from you immediately, stops them from messaging you, and notifies our safety team. You can undo a block under Profile → Privacy → Blocked. To reach a person about anything you see, use Profile → Contact support in the app or email edwardroh89@gmail.com.
 
 ---
 
 ## Invites, contacts and location
 
 - Invite links and QR codes connect two accounts. Only send invites to people who want to hear from you. Texts you send from the invite screens come from your own phone and are your responsibility.
-- People you import from your contacts become private entries in your friends list. Importing never sends a message on its own.
+- Importing from your contacts uploads only the people you pick: their name and phone number are saved to your private friends list on our servers, so you can invite them and see them here when they join. The rest of your address book never leaves your phone. Importing never sends a message on its own.
 - Location sharing is off until you turn it on. When on, connected friends who also share can see roughly where you are (about one kilometre). Turn it off any time in Settings.
 
 ---
@@ -102,7 +102,7 @@ We may update these terms; the date at the top will change and the current versi
 
 ## Contact
 
-Questions? Use Settings → Help → Send feedback in the app, or email edwardroh89@gmail.com.
+Questions? Use Profile → Contact support (or Send feedback) in the app, or email edwardroh89@gmail.com.
 
 ---
 
